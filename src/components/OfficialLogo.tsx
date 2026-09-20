@@ -20,21 +20,22 @@ export const OfficialLogo: React.FC<OfficialLogoProps> = ({
       className={`relative inline-flex items-center justify-center select-none ${className}`}
     >
       <motion.div
-        initial={animateOnMount ? { opacity: 0, scale: 0.95, y: 14 } : false}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
+        initial={animateOnMount ? { opacity: 0.6, y: 4 } : false}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 1.4,
-          ease: [0.16, 1, 0.3, 1],
+          duration: 0.35,
+          ease: "easeOut",
         }}
         className="relative overflow-visible flex items-center justify-center"
       >
-        {/* The Official Logo Image - Pure transparent PNG, zero background shadow, zero overlay */}
+        {/* The Official Logo Image - Pure transparent PNG, high priority, instant load */}
         <img
           src={OFFICIAL_LOGO_URL}
           alt="Logomarca Oficial"
-          loading={isLarge ? "eager" : "lazy"}
+          loading="eager"
           decoding="async"
-          className={`relative z-10 w-auto object-contain transition-all duration-700 ${
+          fetchPriority="high"
+          className={`relative z-10 w-auto object-contain transition-all duration-300 ${
             isLarge
               ? "max-h-[140px] sm:max-h-[180px] md:max-h-[220px] max-w-[88vw] sm:max-w-[420px]"
               : "max-h-[90px] sm:max-h-[110px] max-w-[70vw] sm:max-w-[320px]"

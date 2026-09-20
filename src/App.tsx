@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AliveBackground } from "./components/AliveBackground";
 import { OpeningHero } from "./components/OpeningHero";
 import { ImpactStatement } from "./components/ImpactStatement";
@@ -10,8 +10,20 @@ import { EditorialMoments } from "./components/EditorialMoments";
 import { ContactSection } from "./components/ContactSection";
 import { FooterSection } from "./components/FooterSection";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { REAL_PHOTOS, OFFICIAL_LOGO_URL } from "./types";
 
 export default function App() {
+  useEffect(() => {
+    // Eagerly pre-cache logo and all boutique look photos so they appear instantly
+    const logoImg = new Image();
+    logoImg.src = OFFICIAL_LOGO_URL;
+
+    REAL_PHOTOS.forEach((photo) => {
+      const img = new Image();
+      img.src = photo.url;
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full bg-[#140722] text-white selection:bg-[#9d4edd]/35 selection:text-white font-sans-ui overflow-x-hidden">
       {/* Saturated Solid Violet Ambient Background Engine (Zero Camera Zoom) */}

@@ -68,7 +68,7 @@ export const InspirationSection: React.FC = () => {
             <img
               src={REAL_PHOTOS[3].url}
               alt="Editorial look"
-              loading="lazy"
+              loading="eager"
               decoding="async"
               className="w-full h-full object-cover object-center filter brightness-95 contrast-105"
             />
@@ -86,7 +86,7 @@ export const InspirationSection: React.FC = () => {
             <img
               src={REAL_PHOTOS[4].url}
               alt="Editorial look principal"
-              loading="lazy"
+              loading="eager"
               decoding="async"
               className="w-full h-full object-cover object-center filter brightness-100 contrast-105"
             />
@@ -103,7 +103,7 @@ export const InspirationSection: React.FC = () => {
             <img
               src={REAL_PHOTOS[5].url}
               alt="Editorial look detalhe"
-              loading="lazy"
+              loading="eager"
               decoding="async"
               className="w-full h-full object-cover object-center filter brightness-95 contrast-105"
             />

@@ -109,7 +109,7 @@ export const ScrollRevealPhoto: React.FC<ScrollRevealPhotoProps> = ({
         <img
           src={photoUrl}
           alt=""
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover object-center filter brightness-95 contrast-105 saturate-95"
         />

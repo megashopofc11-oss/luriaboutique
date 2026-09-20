@@ -205,7 +205,7 @@ export const LookShowcaseCarousel: React.FC = () => {
                   <img
                     src={photo.url}
                     alt={photo.altText}
-                    loading="lazy"
+                    loading={index < 6 ? "eager" : "lazy"}
                     decoding="async"
                     draggable={false}
                     className="w-full h-full object-cover object-center select-none pointer-events-none filter brightness-95 contrast-105"

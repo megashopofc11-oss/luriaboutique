@@ -17,9 +17,9 @@ export const OpeningHero: React.FC = () => {
 
         {/* Phrases below the logo with Pure White #FFFFFF and High Presence */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.55, ease: "easeOut" }}
+          transition={{ duration: 0.45, delay: 0.15, ease: "easeOut" }}
           className="space-y-3 px-4"
         >
           <p className="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-normal tracking-wide leading-tight text-crisp-shadow">
