@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-editorial: 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Manrope', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #140722;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+.text-editorial-glow {
+  text-shadow: 0 2px 20px rgba(196, 161, 232, 0.45), 0 0 40px rgba(123, 44, 191, 0.3);
+}
+
+.text-crisp-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-serif-subtle {
+  font-family: var(--font-serif);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+/* Hide scrollbars while keeping scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D Butterfly wing flutter */
+@keyframes flutterLeft {
+  0%, 100% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateY(55deg) rotateZ(-6deg);
+  }
+}
+
+@keyframes flutterRight {
+  0%, 100% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateY(-55deg) rotateZ(6deg);
+  }
+}
+
+.animate-wing-left {
+  transform-origin: right center;
+  animation: flutterLeft 0.32s ease-in-out infinite;
+}
+
+.animate-wing-right {
+  transform-origin: left center;
+  animation: flutterRight 0.32s ease-in-out infinite;
+}
+
+/* Smooth ambient light sweep */
+@keyframes sweepLight {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  50%, 100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+}
+
+.animate-sweep-light {
+  animation: sweepLight 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Organic breathing pulse */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+/* Continuously rising transparent bubbles keyframes */
+@keyframes riseUpBubble1 {
+  0% {
+    transform: translate3d(0, 105vh, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.35;
+  }
+  85% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(14px, -15vh, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes riseUpBubble2 {
+  0% {
+    transform: translate3d(0, 105vh, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.28;
+  }
+  85% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translate3d(-18px, -15vh, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes riseUpBubble3 {
+  0% {
+    transform: translate3d(0, 105vh, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.22;
+  }
+  85% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate3d(10px, -15vh, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes riseUpBubble4 {
+  0% {
+    transform: translate3d(0, 105vh, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.32;
+  }
+  85% {
+    opacity: 0.32;
+  }
+  100% {
+    transform: translate3d(-12px, -15vh, 0);
+    opacity: 0;
+  }
+}
+
+.animate-rise-1 {
+  animation: riseUpBubble1 linear infinite;
+}
+
+.animate-rise-2 {
+  animation: riseUpBubble2 linear infinite;
+}
+
+.animate-rise-3 {
+  animation: riseUpBubble3 linear infinite;
+}
+
+.animate-rise-4 {
+  animation: riseUpBubble4 linear infinite;
+}
+
+/* Radial fade masks for photography to dissolve seamlessly into background */
+.mask-radial-fade {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+.mask-edge-fade {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.mask-horizontal-fade {
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}

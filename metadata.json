@@ -1,0 +1,7 @@
+{
+  "name": "Vitrine Digital & Biosite",
+  "description": "Biosite cinematográfico, imersivo e interativo para boutique de moda feminina com vitrine viva e fotografia editorial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
